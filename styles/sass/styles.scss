@@ -1,0 +1,20 @@
+@import'_setup';
+
+
+
+body{
+    background-color: royalblue;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    color:white;
+    font-size:10rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
