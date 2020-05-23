@@ -222,7 +222,9 @@ textarea {
 }
 
 body {
-  background-color: royalblue;
+  background: -webkit-gradient(linear, left top, left bottom, from(#667eea), to(#764ba2));
+  background: linear-gradient(#667eea, #764ba2);
+  height: 100vh;
 }
 
 .container {
@@ -235,11 +237,104 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  height: 70vh;
+}
+
+.wrapper {
+  max-width: 1350px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  75% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  75% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  50% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  75% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  50% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  75% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 h1 {
   color: white;
   font-size: 10rem;
   font-family: Helvetica, Arial, sans-serif;
+  -webkit-animation: 1s ease slideInFromLeft;
+          animation: 1s ease slideInFromLeft;
+}
+
+h2 {
+  color: white;
+  font-size: 8rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-animation: 1s ease slideInFromRight;
+          animation: 1s ease slideInFromRight;
+  text-align: center;
 }
